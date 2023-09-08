@@ -38,3 +38,9 @@ GET http://localhost:3333/places?text=Riacho Fundo II - 1A Etapa QN 11 - Riacho 
 ### 2- Place_id= ChIJdZ3l3f4sWpMRUiHxLrrqWKE
 # GET http://localhost:3333/directions?originId=xxx&destinationId=xxx
 GET http://localhost:3333/directions?originId=ChIJcf_bof1vWpMRFFtaOUlqo5o&destinationId=ChIJdZ3l3f4sWpMRUiHxLrrqWKE
+
+
+### Comando para testar Router Driver Service
+### repl - debug()
+### await get(RoutesDriverService).createOrUpdate({route_id: "ID da Rota", lat: 0 , lng: 0})
+### await get(RoutesDriverService).createOrUpdate({route_id: "64fa630775c6752dcb431668", lat: 0 , lng: 0})

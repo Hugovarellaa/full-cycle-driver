@@ -6,4 +6,5 @@ USER node
 
 CMD [ "tail", "-f", "/dev/null" ]
 
-# Build Container -
+# 1ª passo - npm install na aplicação
+# 2ª passo - npx prisma generate
