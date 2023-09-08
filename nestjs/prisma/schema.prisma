@@ -20,14 +20,30 @@ type Place {
   location Coord
 }
 
+type Point {
+  location   Coord
+  created_at DateTime @default(now())
+}
+
 model Route {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  name        String
-  source      Place
-  destination Place
-  distance    Float
-  duration    Float
-  directions  Json
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  source       Place
+  destination  Place
+  distance     Float
+  duration     Float
+  directions   Json
+  created_at   DateTime      @default(now())
+  updated_at   DateTime      @updatedAt
+  routeDrivers RouteDriver[]
+}
+
+model RouteDriver {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  route      Route    @relation(fields: [route_id], references: [id])
+  route_id   String   @db.ObjectId
+  points     Point[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  // status - pendente, iniciado, finalizado
 }
