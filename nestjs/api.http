@@ -5,7 +5,7 @@ GET http://localhost:3333/test
 GET http://localhost:3333/routes
 
 ### Routes By Id
-GET http://localhost:3333/routes/1
+GET http://localhost:3333/routes/64fa630775c6752dcb431668
 
 ### Routes Post
 POST http://localhost:3333/routes
@@ -13,8 +13,8 @@ Content-Type: application/json
 
 {
   "name": "Route test 1",
-  "source_id": "1",
-  "destination_id": "1"
+  "source_id": "ChIJcf_bof1vWpMRFFtaOUlqo5o",
+  "destination_id": "ChIJdZ3l3f4sWpMRUiHxLrrqWKE"
 }
 
 ### Update By Id Id All
@@ -30,4 +30,11 @@ DELETE   http://localhost:3333/routes/1
 ### Maps
 
 ###Pegar o place_id
-GET http://localhost:3333/places?text=R. C, 786 - St. Leste, Planaltina - GO
+GET http://localhost:3333/places?text=Riacho Fundo II - 1A Etapa QN 11 - Riacho Fundo II, Brasília - DF, 71881-610
+
+
+###Pegar direções entre 2 pontos
+### 1- Place_id= ChIJcf_bof1vWpMRFFtaOUlqo5o
+### 2- Place_id= ChIJdZ3l3f4sWpMRUiHxLrrqWKE
+# GET http://localhost:3333/directions?originId=xxx&destinationId=xxx
+GET http://localhost:3333/directions?originId=ChIJcf_bof1vWpMRFFtaOUlqo5o&destinationId=ChIJdZ3l3f4sWpMRUiHxLrrqWKE
