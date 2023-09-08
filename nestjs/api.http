@@ -1,2 +1,27 @@
-## First test server
-GET http://localhost:3000/test
+### First test server
+GET http://localhost:3333/test
+
+### Routes
+GET http://localhost:3333/routes
+
+### Routes By Id
+GET http://localhost:3333/routes/1
+
+### Routes Post
+POST http://localhost:3333/routes
+Content-Type: application/json
+
+{
+  "name": "Route test 1",
+  "source_id": "1",
+  "destination_id": "1"
+}
+
+### Update By Id Id All
+PATCH  http://localhost:3333/routes/1
+
+### Update By Id
+PUT   http://localhost:3333/routes/1
+
+### Delete By Id
+DELETE   http://localhost:3333/routes/1
