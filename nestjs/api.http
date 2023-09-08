@@ -25,3 +25,9 @@ PUT   http://localhost:3333/routes/1
 
 ### Delete By Id
 DELETE   http://localhost:3333/routes/1
+
+
+### Maps
+
+###Pegar o place_id
+GET http://localhost:3333/places?text=R. C, 786 - St. Leste, Planaltina - GO
